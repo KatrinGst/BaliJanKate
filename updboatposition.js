@@ -1,7 +1,7 @@
 const boatContainer = document.querySelector('.boat-container');
 
 function updateBoatPosition() {
-  const currentDate = new Date();
+  const currentDate = new Date('January 1, 2023');
   const travelDate = new Date('April 29, 2023');
   const timeRemaining = travelDate.getTime() - currentDate.getTime();
   const totalTime = travelDate.getTime() - new Date('January 1, 2021').getTime();
