@@ -1,0 +1,109 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url("guillaume-marques-bnMPFPuSCI0-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+
+}
+
+  
+  h1 {
+  color: white;
+  font-size: 3em;
+  text-align: center;
+  font-weight: 400;
+  background-image: url("text.jpg");
+  background-size: 250px;
+  background-repeat: repeat;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 2px 2px 4px rgba(179, 147, 211, 0.1),
+               3px 4px 4px rgba(179, 147, 211, 0.15),
+               4px 6px 4px rgba(179, 147, 211, 0.2),
+               5px 8px 4px rgab(179, 147, 211, 0.25);
+}
+
+#countdown-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+#countdown {
+ background-image: url("text2.jpg");
+  background-size: 250px;
+  background-repeat: repeat;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 10em;
+  text-align: center;
+}
+/* Add this to your page's CSS stylesheet */
+#comments {
+  margin: 2em;
+  background-color: white;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+#comments form {
+  display: flex;
+  flex-direction: column;
+}
+
+#comments input[type="text"], #comments textarea {
+  margin: 0.5em 0;
+  padding: 0.5em;
+  font-size: 1em;
+  border-radius: 0.5em;
+  border: none;
+}
+
+#comments input[type="submit"] {
+  margin-top: 1em;
+  padding: 0.5em;
+  font-size: 1em;
+  border-radius: 0.5em;
+  border: none;
+  background-color: #1da1f2;
+  color: white;
+}
+
+#comment-list {
+  margin-top: 1em;
+}
+
+.comment {
+  margin: 1em;
+  padding: 1em;
+  background-color: #f5f8fa;
+  border-radius: 1em;
+}
+
+.comment p {
+  font-size: 1em;
+  margin: 0;
+}
+
+.comment .metadata {
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  font-size: 0.8em;
+  color: #657786;
+  margin-top: 0.5em;
+}
+
+.comment .metadata img {
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  margin-right: 0.5em;
+}
+
