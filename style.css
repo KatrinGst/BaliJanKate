@@ -63,13 +63,13 @@ body {
 #runner {
    
   position: absolute;
-  top: -5px;
-  left: 0;
-  height: 30px;
-  width: 30px;
-  background-color: transparent;
-  border-radius: 100%;
-  transition: right 1s ease-in-out;
+  top: -90px;
+  left: -25;
+  height: 0px;
+  width: 0px;
+  background-color: #4CAF50;
+  border-radius: 10%;
+  transition: left 1s ease-in-out;
 
     }
 
