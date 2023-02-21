@@ -1,38 +1,29 @@
-// get the start and end dates
-const startDate = new Date(2023, 0, 1); // January 1, 2023
-const endDate = new Date(2023, 3, 29); // April 29, 2023
+// Set the start and end dates
+const startDate = new Date('2023-01-01');
+const endDate = new Date('2023-04-29');
 
-// get the boat and icon elements
+// Get the boat, start, end, and path elements
 const boat = document.getElementById('boat');
-const startIcon = document.getElementById('start-icon');
-const endIcon = document.getElementById('end-icon');
+const start = document.getElementById('start');
+const end = document.getElementById('end');
+const path = document.getElementById('path');
 
-// calculate the distance between start and end dates in milliseconds
-const totalDistance = endDate.getTime() - startDate.getTime();
+// Set the start and end positions
+const startPercent = 0;
+const endPercent = 100;
 
-// get the current date and calculate the distance from start to current date
-const currentDate = new Date();
-const currentDistance = currentDate.getTime() - startDate.getTime();
+// Calculate the current position
+const now = new Date();
+const timeDiff = endDate.getTime() - startDate.getTime();
+const timeElapsed = now.getTime() - startDate.getTime();
+const percentElapsed = (timeElapsed / timeDiff) * 100;
+const boatPosition = startPercent + ((endPercent - startPercent) * (percentElapsed / 100));
 
-// calculate the percentage of the distance travelled
-const progress = currentDistance / totalDistance;
+// Update the boat and path positions
+boat.style.left = `${boatPosition}%`;
+path.style.width = `${boatPosition - 10}%`;
 
-// calculate the position of the boat based on the progress
-const boatPosition = progress * 100;
+// Set the start and end icons
+start.style.left = '0';
+end.style.right = '0';
 
-// set the position of the boat
-boat.style.left = boatPosition + '%';
-
-// set the position of the start and end icons
-startIcon.style.left = '0%';
-endIcon.style.left = '100%';
-
-// create the line elements
-const lineContainer = document.getElementById('line-container');
-const lineStep = 100 / 4; // four steps, one for each month
-for (let i = 0; i <= 4; i++) {
-  const line = document.createElement('div');
-  line.classList.add('line');
-  line.style.left = i * lineStep + '%';
-  lineContainer.appendChild(line);
-}

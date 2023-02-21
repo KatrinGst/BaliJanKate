@@ -46,17 +46,70 @@ body {
 }
 
 
-  #boat-container {
-    
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 9999;
-  }
-  
-  .boat-container img {
-    width: 150px;
-  }
+  body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+
+.boat-container {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 80px;
+}
+
+.boat {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 80px;
+	height: 80px;
+	background-image: url("boat.png");
+	background-size: cover;
+	animation-name: move-boat;
+	animation-duration: 100s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+.start, .end {
+	position: absolute;
+	bottom: 0;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: #000;
+}
+
+.start {
+	left: 0;
+}
+
+.end {
+	right: 0;
+}
+
+.path {
+	position: absolute;
+	left: 10px;
+	bottom: 10px;
+	height: 5px;
+	background-color: #00F;
+}
+
+@keyframes move-boat {
+	from {
+		left: 0;
+	}
+	to {
+		left: 100%;
+	}
+}
+
+
 
 /* Add this to your page's CSS stylesheet */
 #comments {
