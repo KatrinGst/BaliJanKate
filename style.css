@@ -45,8 +45,33 @@ body {
   text-align: center;
 }
 
+#download-bar {
+  width: 100%;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  height: 20px;
+  position: relative;
+  margin-top: 20px;
+}
+#progress-bar {
+  height: 100%;
+   background-image: url("text.jpg");
+  border-radius: 5px;
+  position: relative;
+  transition: width 1s ease-in-out;
+}
+#runner {
+   
+  position: absolute;
+  top: -5px;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  background-color: transparent;
+  border-radius: 100%;
+  transition: right 1s ease-in-out;
 
-
+    }
 
 
 /* Add this to your page's CSS stylesheet */
